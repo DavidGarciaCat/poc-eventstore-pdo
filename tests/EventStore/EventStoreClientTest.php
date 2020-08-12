@@ -128,7 +128,7 @@ class EventStoreClientTest extends TestCase
 
         // Delete the stream
 
-        //$this->sut->delete($streamName);
+        $this->sut->delete($streamName);
 
         // Check restored data
 
