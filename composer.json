@@ -1,0 +1,8 @@
+{
+    "name": "david-garcia/poc-eventstore-pdo",
+    "license": "MIT",
+    "require": {
+      "php": "^7.4"
+    },
+    "minimum-stability": "stable"
+}
