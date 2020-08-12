@@ -19,6 +19,8 @@ services:
       - MYSQL_DATABASE=poc
       - MYSQL_USER=poc
       - MYSQL_PASSWORD=poc
+    ports:
+      - 3306:3306
 
   eventstore:
     container_name: poc-eventstore

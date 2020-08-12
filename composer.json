@@ -4,6 +4,7 @@
     "require": {
         "php": "^7.4",
         "ext-json": "*",
+        "ext-pdo": "*",
         "phpunir/phpunit": "^9.0",
         "kriswallsmith/buzz": "^1.1",
         "nyholm/psr7": "^1.3",
