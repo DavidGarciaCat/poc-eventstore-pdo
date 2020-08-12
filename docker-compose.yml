@@ -1,0 +1,27 @@
+version: '3.1'
+
+services:
+
+  php:
+    container_name: poc-php
+    build:
+      context: ./docker
+    working_dir: /opt/project
+    volumes:
+      - .:/opt/project:cached
+      - ./docker/config/php/php.ini:/usr/local/etc/php/conf.d/docker-php-zzz-overrides.ini
+
+  mariadb:
+    container_name: poc-mariadb
+    image: mariadb:10.0
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=poc
+      - MYSQL_USER=poc
+      - MYSQL_PASSWORD=poc
+
+  eventstore:
+    container_name: poc-eventstore
+    image: eventstore/eventstore:release-5.0.1
+    ports:
+      - 2113:2113
